@@ -2,8 +2,8 @@
 FROM golang:1-alpine as builder
 
 ENV GOCARBON_VERSION=0.15.6
-ENV CARBONAPI_VERSION=0.14.2
-ENV GRAFANA_VERSION=7.3.7
+ENV CARBONAPI_VERSION=0.15.2
+ENV GRAFANA_VERSION=7.5.2
 ENV GOPATH=/opt/go
 
 RUN \
@@ -58,7 +58,7 @@ RUN \
   mv carbonapi /tmp/carbonapi
 
 # ------------------------------ RUN IMAGE --------------------------------------
-FROM alpine:3.13.2
+FROM alpine:3.13.4
 
 ENV TZ='Europe/Amsterdam'
 
